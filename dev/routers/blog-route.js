@@ -37,11 +37,11 @@ router.route('/:blogId').delete(deleteBlog)
 
 
 const { 
-  createComent, removeComment
+  createComment, removeComment
  } = require('../../controllers/blogcontroller');
 
-router.route('/:blogId/commentss').post(createComment);
-router.route('/:blogId/commentss/:commentId').delete(removeComment);
+router.route('/:blogId/comments').post(createComment);
+router.route('/:blogId/comments/:commentId').delete(removeComment);
 
 
 module.exports = router;

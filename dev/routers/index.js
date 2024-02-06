@@ -4,7 +4,7 @@ const blogRoutes = require('./blog-routes')
 
 
 router.use('/users' ,userRoutes)
-router.use('/thoughts' ,blogRoutes)
+router.use('/blogs' ,blogRoutes)
 
 
 module.exports = router

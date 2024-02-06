@@ -13,7 +13,6 @@ const userController = {
       _id: req.params.userId
     })
       .select('-__v')
-    // .populate('friends').populate('thoughts')
     res.json(singleUser)
   },
 
@@ -40,22 +39,22 @@ const userController = {
     res.json({message: "user deleted"})
   },
 
-  // addFriend
-  async addFriend(req, res) {
-    const newFriend = await User.findByIdAndUpdate(
+  // addClassmates
+  async addClassmate(req, res) {
+    const newClassamte = await User.findByIdAndUpdate(
       {_id: req.params.userId},
-      {$addToSet:{friends:req.params.friendId}}
+      {$addToSet:{classmates:req.params.classmateId}}
     )
-    res.json(newFriend)
+    res.json(newClassmate)
   },
 
 
-  //removeFriend
+  //removeClassmates
 
-  async removeFriend(req,res) {
-    const removeFriend = await User.findByIdAndUpdate(
+  async removeClassmate(req,res) {
+    const removeClassmate = await User.findByIdAndUpdate(
       {_id: req.params.userId},
-      {$pull:{friends:req.params.friendId}}
+      {$pull:{classmates:req.params.classmateId}}
     )
     if(!removeFriend) {return res.status(404).json({message:"Friend not found"})}
     res.json({message: "Friend Removed"})

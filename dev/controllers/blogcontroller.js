@@ -12,7 +12,6 @@ const  blogController = {
       _id: req.params.blogId
     })
       .select('-__v')
-    // .populate('friends').populate('thoughts')
     res.json(singleBlog)
   },
 
@@ -46,7 +45,7 @@ const  blogController = {
     res.json({message: "Blog deleted"})
   },
 
-// createReaction
+// createComment
 async createComment(req, res) {
   const updatedBlog = await Blog.findOneAndUpdate(
     { _id: req.params.blogId },
@@ -57,7 +56,7 @@ async createComment(req, res) {
 },
 
 
-// removeReaction
+// removeComment
 async removeComment(req, res) {
   try{
     const removedComment = await Blog.findOneAndUpdate(
