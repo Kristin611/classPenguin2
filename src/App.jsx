@@ -31,5 +31,33 @@ function App() {
     </>
   )
 }
+import React from 'react';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="hero">
+        <div className="hero-content">
+          <h1>Your Catchy Headline</h1>
+          <p>A brief description or call-to-action subheadline goes here.</p>
+          <a href="#learn-more" className="btn">Learn More</a>
+        </div>
+      </header>
+
+      <section id="learn-more" className="main-content">
+        <h2>About Us</h2>
+        <p>Write more details about your product or service here.</p>
+        {/* Add more sections as needed */}
+      </section>
+
+      <footer>
+        <p>&copy; 2024 Your Company Name</p>
+      </footer>
+    </div>
+  );
+}
+
+
 
 export default App
