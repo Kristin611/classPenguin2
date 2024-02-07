@@ -1,0 +1,7 @@
+.carlyButton{
+  display: flex; 
+  justify-content: flex-end;
+  margin-right: 2rem;
+  margin-top: 2rem;
+}
+
