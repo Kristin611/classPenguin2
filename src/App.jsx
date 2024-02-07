@@ -1,19 +1,20 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-import './App.css'
-import Preview from './components/preview/index.jsx'
+import "./App.css";
+import LoginButton from "./Components/loginButton";
+import CreatePostButton from "./Components/createPost";
+import Preview from "./Components/preview";
 
+import "./App.css";
+import Hero from "./Components/Hero";
 function App() {
- 
-  
   return (
-    
-    
     <>
-  <Preview />
+      <Hero />
+
+      <LoginButton />
+      <CreatePostButton />
+      <Preview />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
