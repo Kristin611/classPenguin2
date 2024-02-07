@@ -1,0 +1,33 @@
+body{
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.previewheader {
+    color: black;
+}
+
+.preview {
+    font-size: medium;
+    color: black;
+    
+}
+
+.previewphoto {
+    display: flex;
+    justify-content:right;
+
+}
+
+.flexContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    color: black;
+    font-size: medium;
+    border-radius: 5px;
+    
+}
