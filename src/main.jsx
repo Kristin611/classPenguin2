@@ -5,6 +5,7 @@ import App from './App.jsx'
 import './index.css'
 
 
+
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 //import css
@@ -44,5 +45,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(<RouterProvider router={router} />);
 
-
+ReactDOM.createRoot(document.getElementById('root')).render(
+    <App />
+)
 
