@@ -11,5 +11,63 @@
 }
 
 .read-the-docs {
-  color: #888;
+  color: #6e6d6d;
+}
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.hero {
+  background-image: url('https://www.calgaryzoo.com/wp-content/uploads/2023/09/KingPenguin-Jan-12-2021-1-WM-e1695158996612.jpg'); 
+  background-size: cover;
+  background-position: right;
+  color: #fff;
+  text-align: right;
+  padding: 100px 0;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #333;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+h2 {
+color: #333;
+}
+
+p {
+  color: #333;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #fff;
+  background-color: #3498db; /* Replace with your color */
+  border-radius: 5px;
+}
+
+.main-content {
+  padding: 70px 0;
+  text-align: center;
+}
+
+footer {
+  
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  position: absolute;
+  width: 50%;
+  bottom: 0;
 }
