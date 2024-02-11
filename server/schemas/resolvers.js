@@ -2,11 +2,11 @@ const { Blog } = require('../models');
 
 const resolvers = {
   Query: {
-    blogs: async () => {
+    blog: async () => {
       return Blog.find().sort({ createdAt: -1 });
     },
 
-    blog: async (parent, { blogId }) => {
+    oneBlog: async (parent, { blogId }) => {
       return Blog.findOne({ _id: blogId });
     },
   },
