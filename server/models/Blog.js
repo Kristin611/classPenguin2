@@ -1,5 +1,5 @@
-const { Schema, model,Types } = require('mongoose');
-const dateFormat = require('../utils/dateFormat');
+const { Schema, model, Types } = require ('mongoose');
+const dateFormat = require ('../utils/dateFormat');
 
 const commentSchema = new Schema(
   {
@@ -14,7 +14,7 @@ const commentSchema = new Schema(
       },
       createdAt: {
           type: Date,
-          default: Date.now(),
+          default: Date.now,
       },
       username: {
           type: String,
@@ -35,19 +35,13 @@ const blogSchema = new Schema(
       blogContent: {
         type: String,
         required: true,
-        minlength: 100,
+        minlength: 1,
         maxlength: 10000,
         trim: true,
       },
       blogAuthor: {
         type: String,
-        required: true,
-        trim: true,
-      },
-      authorProffession: {
-        type: String,
         required: false,
-        unique: true,
         trim: true,
       },
       createdAt: {
@@ -66,7 +60,7 @@ const blogSchema = new Schema(
 );
 
 blogSchema.virtual('commentCount').get(function () {
-    return this.comments.length
+  return this.comments.length
 })
 
 const Blog = model('Blog', blogSchema);
