@@ -18,16 +18,21 @@ const typeDefs = `
     createdAt: String
     username: String
   }
-  type Query {
-   blog: [Blog]
-   oneBlog(blogId: ID!): Blog
-    user: [User]
-  
-  }
+
   type Auth {
     token: ID!
     user: User
   }
+
+  type Query {
+   blog: [Blog]!
+   oneBlog(blogId: ID!): Blog
+   user: [User]!
+   oneUser(userId: ID!): User
+   me: User
+  
+  }
+
 
 
   # Define which mutations the client is allowed to make
@@ -43,4 +48,3 @@ const typeDefs = `
 `;
 
 module.exports = typeDefs;
-

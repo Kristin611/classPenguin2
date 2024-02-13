@@ -1,4 +1,5 @@
-const { Blog } = require('../models');
+const { Blog, User } = require('../models');
+const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
   Query: {
@@ -9,11 +10,51 @@ const resolvers = {
     oneBlog: async (parent, { blogId }) => {
       return Blog.findOne({ _id: blogId });
     },
+    user: async () => {
+      return User.find();
+    },
+    oneUser: async (parent, {userId}) => {
+      return User.findOne({ _id: userId})
+    },
+    //by adding context to query, we can retreive the logged in user without specifically searching for them
+    me: async (parent, args, context) => {
+      if (context.user) {
+        return User.findeOne({ _id: context.user._id})
+      }
+      throw AuthenticationError;
+    }
   },
 
   Mutation: {
-    addBlog: async (parent, { blogText, blogAuthor }) => {
-      return Blog.create({ blogText, blogAuthor });
+    addBlog: async (parent, { blogContent, blogAuthor }) => {
+      return Blog.create({ blogContent, blogAuthor });
+    },
+    addUser: async (parent, { username, email, password }) => {
+      const user = await User.create({ username, email, password });
+      const token = signToken(user);
+
+      return { token, user };
+    },
+    login: async (parent, { username, email, password }) => {
+      const user = await User.findOne({ username });
+
+      if (!user) {
+        throw AuthenticationError;
+      }
+
+      const userEmail = await User.findOne({email});
+      if (!userEmail) {
+        throw AuthenticationError;
+      }
+
+      const correctPw = await user.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw AuthenticationError;
+      }
+
+      const token = signToken(user);
+      return { token, user };
     },
     addComment: async (parent, { blogId, commentBody }) => {
       return Blog.findOneAndUpdate(

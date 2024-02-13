@@ -8,6 +8,16 @@ const userSchema = new Schema(
       required: true,
       unique:true,
     },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+      match: [/.+@.+\..+/, 'Must match an email address!'],
+    },
+    password: {
+      type: String,
+      required: true,
+    },
 
     blogs: [
       {
@@ -15,10 +25,7 @@ const userSchema = new Schema(
         ref: 'Blog',
       },
     ],
-    password: {
-      type: String,
-      required: true,
-    },
+    
   },
   {
     toJSON: {
