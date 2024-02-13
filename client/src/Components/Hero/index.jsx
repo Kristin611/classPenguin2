@@ -1,9 +1,12 @@
 import React from 'react';
-
+import "./Hero.css"
+import HeroPic from "../../assets/KingPenguin.jpeg"
 function Hero() {
   return (
-    <div>
+    <div className=".heroHead">
+       
       <header className="hero">
+      <img id= "hero-img" src={HeroPic}/>
         <div className="hero-content">
           <h1>ClassPenguin:</h1>
           <p>Streamlined Learning, Endless Success</p>
@@ -18,7 +21,7 @@ function Hero() {
       </section>
 
       <footer>
-        <p>&copy; 2024 ClassPenguin</p>
+
       </footer>
     </div>
   );

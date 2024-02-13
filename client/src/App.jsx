@@ -38,6 +38,7 @@ function App() {
   return (
     <>
       <ApolloProvider client={client}>
+      <Navbar />
       <Hero />
       <LoginButton />
       <CreatePostButton />
