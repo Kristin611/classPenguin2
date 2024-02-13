@@ -18,19 +18,9 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
-.hero {
-  background-image: url('https://www.calgaryzoo.com/wp-content/uploads/2023/09/KingPenguin-Jan-12-2021-1-WM-e1695158996612.jpg'); 
-  background-size: cover;
-  background-position: right;
-  color: #fff;
-  text-align: right;
-  padding: 100px 0;
-}
 
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
+
+
 
 h1 {
   color: #333;

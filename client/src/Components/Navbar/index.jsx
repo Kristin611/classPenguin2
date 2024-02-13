@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import React from 'react';
+import catPhoto from '../../assets/Logo.png'
+
+
 
 const Navbar = () => {
 	return (
@@ -14,13 +17,12 @@ const Navbar = () => {
             </div>
             <ul className="menu-items">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Category</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Testimonial</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">Blog</a></li>
             </ul>
-            <h1 className="logo">Navbar</h1>
+            <div className="image-container">
+
+            <img className="logo" src={catPhoto} alt="Logo" />
+            </div>
         </div>
     </nav>
 	);

@@ -34,17 +34,29 @@
 .navbar-container {
   display: flex;
   justify-content: space-between;
-  height: 64px;
+  padding: .5rem;
   align-items: center;
+
 }
 
 .menu-items {
   order: 2;
   display: flex;
 }
-.logo {
+ .logo {
   order: 1;
-  font-size: 2.3rem;
+ width: 100%;
+}
+/* /* .logo {
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    width: 100%;
+
+  } */
+.image-container{
+  max-width: 10rem;
+  min-width: 5rem;
 }
 
 .menu-items li {
@@ -126,7 +138,8 @@
     transform-origin: 0% 100%;
     transition: transform 0.3s ease-in-out;
   }
-
+ 
+  
   .navbar .menu-items {
     padding-top: 100px;
     background: #fff;
@@ -145,15 +158,10 @@
   .navbar .menu-items li {
     margin-bottom: 1.8rem;
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 800;
   }
 
-  .logo {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 2.5rem;
-  }
+  
 
   .navbar-container input[type="checkbox"]:checked ~ .menu-items {
     transform: translateX(0);
