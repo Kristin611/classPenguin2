@@ -2,7 +2,8 @@
 import ReactDOM from 'react-dom/client'
 import React  from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Preview from './Components/Preview/index.jsx';
+import Preview from "./Components/preview";
+import TestPreview from './Components/TestPreview/index.jsx'
 import App from './App.jsx'
 import './index.css'
 
@@ -14,9 +15,7 @@ import './index.css'
 
 //import pages the router will use to conditionally show the appropriate views
 import Home from './Components/Hero';
-// import About from './pages/About';
-// import Donate from './pages/Donate';
-// import ErrorPage from './pages/ErrorPage';
+
 
 const router = createBrowserRouter([
   //defining accessible routes
@@ -34,6 +33,10 @@ const router = createBrowserRouter([
         path: '/preview',
         element: <Preview/>
       },
+      {
+        path: '/create',
+        element: <TestPreview/>
+      }
 
     ]
   }

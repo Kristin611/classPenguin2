@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import React from 'react';
-import catPhoto from '../../assets/Logo.png'
+import catPhoto from '../../assets/Logo.png';
+import LoginButton from '../../Components/LoginButton/index';
+import CreatePostButton from '../../Components/createPost/index'; 
 
 
 
@@ -16,8 +18,11 @@ const Navbar = () => {
                 <span className="line line3"></span>
             </div>
             <ul className="menu-items">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Blog</a></li>
+                <li>
+                    <Link to='/'>Home</Link>
+                </li>
+                <li><LoginButton/></li>
+                <li><CreatePostButton/></li>
             </ul>
             <div className="image-container">
 

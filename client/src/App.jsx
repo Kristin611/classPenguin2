@@ -1,9 +1,10 @@
 
 import React from "react";
 import "./App.css";
+import { Outlet } from 'react-router-dom';
 import LoginButton from "./Components/LoginButton";
 import CreatePostButton from "./Components/createPost";
-// import Preview from "./Components/preview";
+import Preview from "./Components/preview";
 import Hero from "./Components/Hero";
 import Navbar from './components/Navbar';
 // import BootstrapCard from './Components/BootstrapCard';
@@ -39,12 +40,15 @@ function App() {
     <>
       <ApolloProvider client={client}>
       <Navbar />
-      <Hero />
-      <LoginButton />
-      <CreatePostButton />
-      {/* <Preview /> */}
-      {/* <BootstrapCard /> */}
-      <Navbar />
+      {/* <Hero /> */}
+      <main>
+        <Outlet />
+      </main>
+      
+      {/* <LoginButton />
+      
+      <Preview /> */}
+      {/* <Navbar /> */}
       </ApolloProvider>
     </>
     )

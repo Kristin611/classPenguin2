@@ -7,26 +7,43 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  width: 700,
   border: "2px solid #000",
   boxShadow: 24,
   p: 4,
 };
 
 const LoginButton = () => {
-    const navigate = useNavigate();
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const navigate = useNavigate();
+
+  const handleOpen = () => {
+    console.log('Modal open state before opening:', open)
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    console.log('Modal open state before closing:', open);
+    setOpen(false);
+  };
+  
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log('Form submitted');
+
+    //ensure the modal is closed before navigating
+    setOpen(false);
+
+  //   const navigate = useNavigate();
+  //   console.log("submit");
+  //   const username = event.target.elements.username.value;
+  //   const email = event.target.elements.email.value;
+  //   const password = event.target.elements.password.value;
+  //   console.log(`Username: ${username}, Email: ${email}, Password: ${password}`);
+    console.log('navigating to preview')
+      navigate('/preview');
+      // console.log('navigate', navigate)
     
-    console.log("submit");
-    const username = event.target.elements.username.value;
-    const email = event.target.elements.email.value;
-    const password = event.target.elements.password.value;
-    console.log(`Username: ${username}, Email: ${email}, Password: ${password}`);
-    navigate('/preview');
 };
 
 
@@ -50,6 +67,7 @@ const LoginButton = () => {
               Password:
               <input type="text" name="password" />
             </label>
+            <br />
             <button type="submit">Submit</button>
         </form>
         </Box>
