@@ -1,11 +1,12 @@
 
 import React from "react";
 import "./App.css";
-import LoginButton from "./Components/loginButton";
+import LoginButton from "./Components/LoginButton";
 import CreatePostButton from "./Components/createPost";
-import Preview from "./Components/preview";
+// import Preview from "./Components/preview";
 import Hero from "./Components/Hero";
 import Navbar from './components/Navbar';
+// import BootstrapCard from './Components/BootstrapCard';
 
 import {  ApolloClient,  InMemoryCache,  ApolloProvider,  createHttpLink,} from '@apollo/client';
 const httpLink = createHttpLink({
@@ -40,8 +41,8 @@ function App() {
       <Hero />
       <LoginButton />
       <CreatePostButton />
-      <Preview />
-
+      {/* <Preview /> */}
+      {/* <BootstrapCard /> */}
       <Navbar />
       </ApolloProvider>
     </>

@@ -1,7 +1,7 @@
 import React from "react";
 import "./preview.css";
 
-const preview = () => {
+const Preview = () => {
   return (
     <div className='flexContainer'>
       
@@ -35,4 +35,4 @@ const preview = () => {
   );
 };
 
-export default preview;
+export default Preview;

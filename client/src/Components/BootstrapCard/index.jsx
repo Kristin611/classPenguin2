@@ -1,28 +1,20 @@
 import PropTypes from 'prop-types';
 import './BootstrapCard.css';
+import React from 'react';
 
 
 
-
-const BootstrapCard = ({ title, text }) => {
+const BootstrapCard = () => {
   const cardData = [
     {
       title: 'Penguin Party',
       text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui autem obcaecati eius!",
-      links: [
-        { href: 'https://example1.com', label: 'Read Me' },
-     
-        // add more links as needed
-      ]
+
     },
     {
       title: 'Pouty Penguin',
       text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, natus? Labore doloremque quo impedit totam a qui necessitatibus consequuntur, eveniet architecto, ipsum atque, modi unde molestias sunt sequi accusamus voluptatem.",
-      links: [
-        { href: 'https://example1.com', label: 'Read Me' },
-      
-        // add more links as needed
-      ]
+
     },
     {
       title: 'Pandemonia Penguin',
