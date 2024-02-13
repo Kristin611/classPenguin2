@@ -1,19 +1,19 @@
 
+import React from "react";
 import "./App.css";
 import LoginButton from "./Components/loginButton";
 import CreatePostButton from "./Components/createPost";
 import Preview from "./Components/preview";
 import Hero from "./Components/Hero";
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  createHttpLink,
-} from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
+import Navbar from './components/Navbar';
+
+import {  ApolloClient,  InMemoryCache,  ApolloProvider,  createHttpLink,} from '@apollo/client';
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
+import { setContext } from '@apollo/client/link/context';
+
+
 
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('id_token');
@@ -31,8 +31,7 @@ const client = new ApolloClient({
 });
 
 
-import './App.css'
-import Navbar from './components/Navbar';
+
 
 function App() {
   return (
