@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import './BootstrapCard.css';
 import React from 'react';
 
@@ -53,29 +52,28 @@ const BootstrapCard = () => {
       ]
     },];
 
-  return (
-<>
-      {cardData.map((card, index) => (
-        <div key={index} className="card mb-3 dark bootstrap-card">
 
-              <div className="card-body">
-                <div className="card-header">
+
+
+    return (
+      <>
+        {cardData.map((card, index) => (
+          <div key={index} className="card mb-3 dark bootstrap-card">
+            <div className="card-body">
+              <div className="card-header">
                 <h5 className="card-title dark">{card.title}</h5>
                 <p className="card-text text-section">{card.text}</p>
-                </div>
-                {card.links.map((link, linkIndex) => (
-                  <a key={linkIndex} href={link.href}>{link.label}</a>
-                ))}
               </div>
-        </div>
-      ))}
-    </>
-  );
-};
+              {Array.isArray(card.links) && card.links.map((link, linkIndex) => (
+                <a key={linkIndex} href={link.href}>{link.label}</a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </>
+    );
+  };
 
-BootstrapCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-};
+
 
 export default BootstrapCard;
