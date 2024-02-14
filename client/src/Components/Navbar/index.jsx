@@ -3,7 +3,7 @@ import './Navbar.css';
 import React from 'react';
 import catPhoto from '../../assets/Logo.png';
 import LoginButton from '../../Components/LoginButton/index';
-import CreatePostButton from '../../Components/createPost/index'; 
+import CreatePostButton from '../../Components/CreatePost'; 
 
 
 
