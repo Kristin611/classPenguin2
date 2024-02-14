@@ -2,7 +2,7 @@
 import ReactDOM from 'react-dom/client'
 import React  from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Preview from "./Components/preview";
+import Preview from "./Components/Preview";
 import TestPreview from './Components/TestPreview/index.jsx'
 import App from './App.jsx'
 import './index.css'
