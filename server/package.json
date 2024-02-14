@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
   "main": "index.js",
+  "engine": {
+    "node": "21.4.0"
+  },
   "scripts": {
     "start": "node server.js",
     "watch": "node server.js",
