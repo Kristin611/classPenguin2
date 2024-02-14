@@ -6,7 +6,7 @@ import LoginButton from "./Components/LoginButton";
 import CreatePostButton from "./Components/CreatePost";
 import Preview from "./Components/Preview";
 import Hero from "./Components/Hero";
-import Navbar from './components/Navbar';
+import Navbar from './Components/Navbar';
 // import BootstrapCard from './Components/BootstrapCard';
 
 import {  ApolloClient,  InMemoryCache,  ApolloProvider,  createHttpLink,} from '@apollo/client';
